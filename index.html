@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gerund vs Infinitive — теория и тренажёры | B1–B2</title>
+<meta name="description" content="Полная тема «Герундий и инфинитив» для B1–B2: правила, глаголы-хамелеоны, конструкции и 3 интерактивных тренажёра.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#182430; --bg:#f5f7f6; --card:#fff;
+  --ing:#0ea88f; --ing-soft:#e2f6f1; --ing-dark:#087f6c;
+  --to:#ff6b4a;  --to-soft:#ffece6;  --to-dark:#d4472a;
+  --both:#f5b820; --both-soft:#fff3cf; --both-dark:#9a7200;
+  --ok:#10b981; --err:#ef4444;
+  --r:18px; --shadow:0 8px 24px rgba(24,36,48,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Manrope',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+.wrap{max-width:980px;margin:0 auto;padding:0 16px}
+:focus-visible{outline:3px solid var(--both);outline-offset:2px;border-radius:8px}
+mark{background:#ffe9a8;padding:0 6px;border-radius:6px}
+
+/* NAV */
+.topnav{position:sticky;top:0;z-index:50;background:rgba(245,247,246,.92);backdrop-filter:blur(10px);border-bottom:1px solid #e3e8e6}
+.nav-inner{display:flex;align-items:center;gap:8px;overflow-x:auto;padding:10px 16px;scrollbar-width:none}
+.nav-inner::-webkit-scrollbar{display:none}
+.logo{font-weight:800;color:var(--ink);text-decoration:none;font-size:18px;white-space:nowrap;margin-right:6px}
+.logo span{color:var(--to)}
+.chip{white-space:nowrap;text-decoration:none;color:var(--ink);font-size:13px;font-weight:700;background:#fff;border:1px solid #e0e7e4;border-radius:999px;padding:6px 14px;transition:.15s}
+.chip:hover{border-color:var(--ing);color:var(--ing-dark);transform:translateY(-1px)}
+
+/* HERO */
+.hero{background:var(--ink);color:#fff;padding:56px 0 48px;background-image:radial-gradient(rgba(255,255,255,.07) 1.5px,transparent 1.5px);background-size:22px 22px}
+.hero h1{font-size:clamp(34px,7vw,62px);font-weight:800;margin:0 0 10px;letter-spacing:-1.5px}
+.hero .g{color:#3ddbb8}.hero .t{color:#ff8a69}.hero .vs{color:var(--both)}
+.hero p{max-width:560px;color:#c7d2d9;margin:0 0 18px;font-size:16px}
+.badges{display:flex;gap:8px;flex-wrap:wrap}
+.badge-st{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:6px 14px;border-radius:999px;font-size:13px;font-weight:700}
+.badge-st:nth-child(odd){transform:rotate(-1.5deg)}
+
+/* SECTIONS / CARDS */
+section{padding:36px 0 4px;scroll-margin-top:70px}
+h2{font-size:clamp(24px,4vw,34px);font-weight:800;margin:0 0 6px;letter-spacing:-.5px}
+.sub{color:#5b6b76;margin:0 0 18px;font-size:15px}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.card{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);padding:20px 22px;border:1px solid #e7ece9}
+.card h3{margin:0 0 10px;font-size:19px}
+.tag{display:inline-block;font-size:12px;font-weight:800;padding:3px 12px;border-radius:999px;margin-bottom:8px}
+.tag.ing{background:var(--ing-soft);color:var(--ing-dark)}
+.tag.to{background:var(--to-soft);color:var(--to-dark)}
+.tag.both{background:var(--both-soft);color:var(--both-dark)}
+.lbl{font-size:12px;font-weight:800;color:#5b6b76;text-transform:uppercase;letter-spacing:.5px;margin:10px 0 4px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.vchip{font-size:13px;font-weight:700;padding:4px 10px;border-radius:10px;background:#f0f4f2;border:1px solid #e0e7e4}
+.vchip.ing{background:var(--ing-soft);border-color:#bfe8de}
+.vchip.to{background:var(--to-soft);border-color:#ffd3c6}
+.ex{border-left:4px solid;border-radius:10px;padding:8px 12px;margin:8px 0;font-size:15px;background:#f8faf9}
+.ex.ing{border-color:var(--ing)} .ex.to{border-color:var(--to)}
+b.ing{color:var(--ing-dark)} b.to{color:var(--to-dark)}
+.note{font-size:13px;color:#5b6b76;margin:6px 0 0}
+.trap{border:2px dashed var(--both);background:var(--both-soft);border-radius:14px;padding:12px 14px;margin-top:12px;font-size:14px}
+
+/* CHAMELEON SWITCH */
+.sw{display:inline-flex;background:#eef2f0;border-radius:999px;padding:4px;gap:4px;margin:4px 0 10px}
+.sw button{border:0;background:transparent;padding:6px 16px;border-radius:999px;font-weight:800;cursor:pointer;font-family:inherit;font-size:13px;color:#5b6b76;transition:.15s}
+.sw button.on.ing{background:var(--ing);color:#fff}
+.sw button.on.to{background:var(--to);color:#fff}
+.cham-ex{min-height:52px}
+
+/* STICKY NOTES */
+.stick{padding:16px 18px;border-radius:14px;font-weight:700;box-shadow:var(--shadow);transform:rotate(-1deg);font-size:15px}
+.stick:nth-child(2n){transform:rotate(1.2deg)}
+.stick small{display:block;font-weight:600;color:#4c5b66;margin-top:4px}
+.s1{background:#d9f4ec}.s2{background:#ffe4da}.s3{background:#fff3c9}.s4{background:#dcecff}
+
+/* TRAINERS */
+.progress{height:8px;background:#e8edeb;border-radius:99px;overflow:hidden;margin:10px 0}
+.progress i{display:block;height:100%;background:linear-gradient(90deg,var(--ing),var(--both));width:0;transition:.3s}
+.q{font-size:17px;font-weight:700;margin:8px 0}
+.blank{color:#9aa7a1}
+.opt{display:block;width:100%;text-align:left;padding:12px 14px;border-radius:12px;border:2px solid #e0e7e4;background:#fff;font-family:inherit;font-size:16px;font-weight:700;cursor:pointer;margin:6px 0;transition:.15s}
+.opt:hover:not(:disabled){border-color:var(--ing);transform:translateY(-1px)}
+.opt.good{border-color:var(--ok);background:#e9f9f1}
+.opt.bad{border-color:var(--err);background:#fdecec}
+.opt:disabled{cursor:default}
+.fb{font-size:14px;font-weight:700;margin:6px 0;min-height:20px}
+.fb.good{color:#0a8f68}.fb.bad{color:#d33}
+.btn{display:inline-block;border:0;background:var(--ink);color:#fff;padding:10px 18px;border-radius:12px;font-family:inherit;font-weight:800;font-size:14px;cursor:pointer;transition:.15s}
+.btn:hover{transform:translateY(-1px);opacity:.92}
+.btn.ghost{background:#e8edeb;color:var(--ink)}
+.btn[hidden]{display:none}
+input.gap{width:120px;padding:8px 10px;border:2px solid #dfe6e3;border-radius:10px;font-family:inherit;font-size:15px;font-weight:700;background:#fff}
+input.gap.ok{border-color:var(--ok);background:#e9f9f1}
+input.gap.err{border-color:var(--err);background:#fdecec}
+.ans{font-size:12px;color:#0a8f68;font-weight:800;margin-left:6px}
+.hunt-s{font-size:16px;font-weight:600;margin:10px 0}
+.chunk{border:0;background:transparent;font:inherit;font-weight:700;padding:2px 4px;border-radius:8px;cursor:pointer;border-bottom:2px dashed #c6d2cd}
+.chunk:hover{background:#eef4f1}
+.chunk.found{background:#fdecec;color:#d33;text-decoration:line-through;border-bottom-color:transparent;cursor:default}
+.fix{font-weight:800;color:#0a8f68;font-size:14px;margin-left:6px}
+.shake{animation:sh .3s}
+@keyframes sh{25%{transform:translateX(-3px)}75%{transform:translateX(3px)}}
+.score{font-size:13px;font-weight:800;background:#eef4f1;padding:4px 12px;border-radius:999px;float:right}
+.check{list-style:none;padding:0;margin:0;font-size:15px}
+.check li{padding:6px 0;border-bottom:1px dashed #e0e7e4}
+.check li:last-child{border:0}
+footer{padding:34px 0 44px;color:#5b6b76;font-size:14px}
+</style>
+</head>
+<body>
+
+<nav class="topnav"><div class="nav-inner">
+  <a class="logo" href="#top">G<span>vs</span>I</a>
+  <a class="chip" href="#basics">База</a>
+  <a class="chip" href="#groups">Группы</a>
+  <a class="chip" href="#cham">Хамелеоны</a>
+  <a class="chip" href="#constr">Конструкции</a>
+  <a class="chip" href="#cheat">Шпаргалка</a>
+  <a class="chip" href="#train">Тренажёры</a>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+  <h1><span class="g">GERUND</span> <span class="vs">vs</span> <span class="t">INFINITIVE</span></h1>
+  <p>-ing или to…? Разбираем раз и навсегда: правила, глаголы-хамелеоны и тренажёры в формате экзамена.</p>
+  <div class="badges">
+    <span class="badge-st">🎯 B1–B2</span>
+    <span class="badge-st">📘 Think 4 · Unit 1</span>
+    <span class="badge-st">🦎 глаголы-хамелеоны</span>
+    <span class="badge-st">🕹 3 тренажёра</span>
+  </div>
+</div></header>
+
+<main class="wrap">
+
+<!-- БАЗА -->
+<section id="basics">
+  <h2>🧱 <mark>База</mark>: две формы — две логики</h2>
+  <p class="sub">Главный принцип: смотри не на форму, а на смысл.</p>
+  <div class="grid g2">
+    <div class="card">
+      <span class="tag ing">-ING</span>
+      <h3>💚 Герундий · V-ing</h3>
+      <p class="note">Процесс и опыт · воспоминания · чувства и предпочтения · после предлогов.</p>
+      <div class="ex ing">I enjoy <b class="ing">reading</b> comics. · She suggested <b class="ing">going</b> out.</div>
+      <p class="note"><b>Мнемоника:</b> HEART → -ING (сердце и опыт).</p>
+    </div>
+    <div class="card">
+      <span class="tag to">TO + INF</span>
+      <h3>🎯 Инфинитив · to + V</h3>
+      <p class="note">Цель и план · решения и обещания · усилие · после прилагательных, too/enough и вопросительных слов.</p>
+      <div class="ex to">She decided <b class="to">to study</b> harder. · He managed <b class="to">to fix</b> it.</div>
+      <p class="note"><b>Мнемоника:</b> HEAD → TO (голова строит планы).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ГРУППЫ -->
+<section id="groups">
+  <h2>📚 Группы глаголов</h2>
+  <p class="sub">Учи не списком, а кластерами смысла — так быстрее.</p>
+  <div class="grid g2">
+    <div class="card">
+      <span class="tag ing">ТОЛЬКО -ING</span>
+      <h3>Группа 1</h3>
+      <p class="lbl">Чувства</p>
+      <div class="chips"><span class="vchip ing">enjoy</span><span class="vchip ing">mind</span><span class="vchip ing">can't stand</span><span class="vchip ing">detest</span><span class="vchip ing">miss</span><span class="vchip ing">appreciate</span></div>
+      <p class="lbl">Конец / избегание</p>
+      <div class="chips"><span class="vchip ing">finish</span><span class="vchip ing">avoid</span><span class="vchip ing">give up</span><span class="vchip ing">quit</span><span class="vchip ing">postpone</span><span class="vchip ing">deny</span><span class="vchip ing">admit</span></div>
+      <p class="lbl">Идеи / практика</p>
+      <div class="chips"><span class="vchip ing">imagine</span><span class="vchip ing">suggest</span><span class="vchip ing">recommend</span><span class="vchip ing">consider</span><span class="vchip ing">practise</span></div>
+      <div class="ex ing">I <b class="ing">can't stand waiting</b> in queues. · He <b class="ing">admitted making</b> a mistake.</div>
+    </div>
+    <div class="card">
+      <span class="tag to">ТОЛЬКО TO + INF</span>
+      <h3>Группа 2</h3>
+      <p class="lbl">Решения</p>
+      <div class="chips"><span class="vchip to">decide</span><span class="vchip to">choose</span><span class="vchip to">plan</span><span class="vchip to">arrange</span><span class="vchip to">promise</span><span class="vchip to">agree</span></div>
+      <p class="lbl">Желания</p>
+      <div class="chips"><span class="vchip to">want</span><span class="vchip to">hope</span><span class="vchip to">expect</span><span class="vchip to">wish</span><span class="vchip to">would like</span></div>
+      <p class="lbl">Усилия</p>
+      <div class="chips"><span class="vchip to">manage</span><span class="vchip to">afford</span><span class="vchip to">refuse</span><span class="vchip to">fail</span><span class="vchip to">pretend</span><span class="vchip to">offer</span><span class="vchip to">learn</span></div>
+      <div class="ex to">We <b class="to">can't afford to buy</b> a new phone. · They <b class="to">promised to help</b>.</div>
+    </div>
+    <div class="card">
+      <span class="tag both">ОБЕ ФОРМЫ · БЕЗ РАЗНИЦЫ</span>
+      <h3>🔄 Переключатель</h3>
+      <div class="chips"><span class="vchip">begin</span><span class="vchip">start</span><span class="vchip">continue</span><span class="vchip">like</span><span class="vchip">love</span><span class="vchip">hate</span></div>
+      <div class="ex ing">It started <b class="ing">raining</b>. = It started <b class="to">to rain</b>.</div>
+      <p class="note">⚠️ Не путай с хамелеонами: здесь смысл НЕ меняется.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ХАМЕЛЕОНЫ -->
+<section id="cham">
+  <h2>🦎 Глаголы-хамелеоны</h2>
+  <p class="sub">Переключай форму и смотри, как меняется смысл. Любимая тема составителей B2 First!</p>
+  <div class="grid g2" id="chamBox"></div>
+</section>
+
+<!-- КОНСТРУКЦИИ -->
+<section id="constr">
+  <h2>🔗 Конструкции-ловушки</h2>
+  <p class="sub">Здесь ошибаются чаще всего — проверь себя.</p>
+  <div class="grid g2">
+    <div class="card">
+      <h3>🔗 Предлог → всегда -ing</h3>
+      <div class="chips"><span class="vchip ing">interested in</span><span class="vchip ing">good at</span><span class="vchip ing">afraid of</span><span class="vchip ing">thank you for</span><span class="vchip ing">think about</span><span class="vchip ing">without</span></div>
+      <div class="ex ing">She's good at <b class="ing">drawing</b>.</div>
+      <div class="trap">⚠️ <b>look forward to, be used to, object to</b> — здесь <b>to</b> — предлог!<br>
+      <b>Тест существительным:</b> look forward to <u>the party</u> ✅ → значит look forward to <b class="ing">seeing</b> ✅, а не ~~to see~~.</div>
+    </div>
+    <div class="card">
+      <h3>🎨 Прилагательное → to + inf</h3>
+      <div class="chips"><span class="vchip to">happy to help</span><span class="vchip to">easy to understand</span><span class="vchip to">important to remember</span><span class="vchip to">ready to start</span></div>
+      <div class="ex to">I'm happy <b class="to">to help</b> you.</div>
+    </div>
+    <div class="card">
+      <h3>⚖️ too / enough → to + inf</h3>
+      <div class="ex to">It's too cold <b class="to">to go</b> outside.</div>
+      <div class="ex to">She's old enough <b class="to">to drive</b>.</div>
+      <p class="note">not strong enough to lift = недостаточно сильный, чтобы поднять.</p>
+    </div>
+    <div class="card">
+      <h3>❓ Вопросительное слово → to + inf</h3>
+      <div class="chips"><span class="vchip to">what to do</span><span class="vchip to">where to go</span><span class="vchip to">how to get</span><span class="vchip to">when to start</span></div>
+      <div class="ex to">I don't know <b class="to">what to do</b>.</div>
+    </div>
+    <div class="card">
+      <h3>🧱 Устойчивые выражения → -ing</h3>
+      <div class="ex ing">It's no use <b class="ing">crying</b>. · It's worth <b class="ing">reading</b>.</div>
+      <div class="ex ing">There's no point (in) <b class="ing">arguing</b>.</div>
+      <div class="chips"><span class="vchip ing">spend time + -ing</span><span class="vchip ing">waste time + -ing</span><span class="vchip ing">have difficulty (in) + -ing</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ШПАРГАЛКА -->
+<section id="cheat">
+  <h2>📌 Шпаргалка на холодильник</h2>
+  <div class="grid g2">
+    <div class="stick s1">💚 HEART → -ING<small>чувства и процесс: enjoy, mind, miss…</small></div>
+    <div class="stick s2">🎯 HEAD → TO<small>решения и цели: decide, hope, promise…</small></div>
+    <div class="stick s3">🔄 begin / start / continue<small>обе формы, ноль разницы</small></div>
+    <div class="stick s4">🔗 Предлог? Ставь -ing!<small>тест: подставь существительное после to</small></div>
+  </div>
+</section>
+
+<!-- ТРЕНАЖЁРЫ -->
+<section id="train">
+  <h2>🕹 Тренажёры</h2>
+  <p class="sub">Формат заданий — как на B2 First Use of English.</p>
+
+  <div class="grid">
+    <div class="card">
+      <span class="score" id="mcqScore">0 / 10</span>
+      <h3>Тренажёр 1 · Выбери форму</h3>
+      <div class="progress"><i id="mcqProg"></i></div>
+      <div id="mcqBox"></div>
+      <p class="fb" id="mcqFb"></p>
+      <button class="btn" id="mcqNext" hidden>Дальше →</button>
+    </div>
+
+    <div class="card">
+      <h3>Тренажёр 2 · Впиши форму</h3>
+      <p class="note">Впиши глагол в нужной форме (например: <b>going</b> или <b>to go</b>).</p>
+      <div id="gapBox"></div>
+      <p class="fb" id="gapFb"></p>
+      <button class="btn" id="gapCheck">Проверить ✔</button>
+      <button class="btn ghost" id="gapReset">Сброс ↺</button>
+    </div>
+
+    <div class="card">
+      <span class="score" id="huntScore">0 / 8</span>
+      <h3>Тренажёр 3 · Охота за ошибками</h3>
+      <p class="note">Кликни по фрагменту с ошибкой. Подсказка: в каждом предложении ровно одна.</p>
+      <div id="huntBox"></div>
+      <p class="fb" id="huntFb"></p>
+      <button class="btn ghost" id="huntShow">Показать ответы 👀</button>
+    </div>
+
+    <div class="card">
+      <h3>📊 Чек-лист экзамена</h3>
+      <ul class="check">
+        <li>✅ Use of English Part 2: видишь предлог → пиши -ing</li>
+        <li>✅ Part 4: stop / remember / regret / try — хамелеоны, сравни смысл</li>
+        <li>✅ Writing: разные паттерны = баллы за Lexical Resource</li>
+        <li>✅ Speaking: «I enjoy… / I decided to…» звучит естественно и бегло</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer><div class="wrap">Сделано для тех, кто целится в B2 First 🚀 Герундий — не приговор, а суперсила.</div></footer>
+
+<script>
+/* ---------- ДАННЫЕ ---------- */
+const MCQ=[
+ {s:"I enjoy ___ mystery novels.",o:["read","reading"],a:1,n:"enjoy + -ing (чувство → -ing)"},
+ {s:"She decided ___ to Spain.",o:["to move","moving"],a:0,n:"decide + to inf (решение → to)"},
+ {s:"Don't forget ___ your mum!",o:["to call","calling"],a:0,n:"forget + to = не забудь сделать"},
+ {s:"He stopped ___ last year. (бросил привычку)",o:["to smoke","smoking"],a:1,n:"stop + -ing = бросил навсегда"},
+ {s:"We can't afford ___ a new car.",o:["to buy","buying"],a:0,n:"afford + to inf"},
+ {s:"I remember ___ you at the conference. (воспоминание)",o:["to meet","meeting"],a:1,n:"remember + -ing = помню прошлое"},
+ {s:"Try ___ the computer. (эксперимент)",o:["to restart","restarting"],a:1,n:"try + -ing = попробуй и посмотри"},
+ {s:"They suggested ___ to the beach.",o:["to go","going"],a:1,n:"suggest + -ing"},
+ {s:"I'm looking forward to ___ you soon.",o:["see","seeing"],a:1,n:"to = предлог → -ing"},
+ {s:"It's worth ___ that museum.",o:["to visit","visiting"],a:1,n:"It's worth + -ing"}];
+const GAPS=[
+ {pre:"She avoids ",v:"eat",post:" fast food.",ans:["eating"]},
+ {pre:"He promised ",v:"help",post:" me with the project.",ans:["to help"]},
+ {pre:"I regret ",v:"tell",post:" him the secret. (жалею о сделанном)",ans:["telling"]},
+ {pre:"We managed ",v:"finish",post:" on time.",ans:["to finish"]},
+ {pre:"Do you mind ",v:"close",post:" the door?",ans:["closing"]},
+ {pre:"They agreed ",v:"meet",post:" at 7.",ans:["to meet"]},
+ {pre:"I'm interested in ",v:"learn",post:" Japanese.",ans:["learning"]},
+ {pre:"He stopped ",v:"buy",post:" a newspaper. (остановился, чтобы)",ans:["to buy"]},
+ {pre:"It's too cold ",v:"go",post:" outside.",ans:["to go"]},
+ {pre:"She can't stand ",v:"wait",post:" in queues.",ans:["waiting"]}];
+const HUNT=[
+ {c:["I enjoy","to play","football with my friends."],e:1,f:"playing",n:"enjoy + -ing"},
+ {c:["She suggested","to go","to the cinema."],e:1,f:"going",n:"suggest + -ing"},
+ {c:["He stopped","to smoke","last year. (бросил)"],e:1,f:"smoking",n:"stop + -ing = бросил"},
+ {c:["I'm looking forward to","see","you."],e:1,f:"seeing",n:"предлог to → -ing"},
+ {c:["We can't afford","buying","a new car."],e:1,f:"to buy",n:"afford + to inf"},
+ {c:["Remember","calling","your grandmother!"],e:1,f:"to call",n:"remember + to = не забудь"},
+ {c:["It's no use","to cry","about it."],e:1,f:"crying",n:"It's no use + -ing"},
+ {c:["I have difficulty","to understand","this rule."],e:1,f:"understanding",n:"have difficulty + -ing"}];
+const CHAM=[
+ {v:"remember",ing:["I remember locking the door.","помню, как делал → прошлое 🕰"],to:["Remember to lock the door!","не забудь сделать → будущее ⏰"]},
+ {v:"forget",ing:["I'll never forget seeing the ocean.","впечатление живёт в памяти 🌊"],to:["I forgot to buy milk.","не сделал — молока нет 🥛"]},
+ {v:"stop",ing:["He stopped smoking.","бросил навсегда 🚭"],to:["He stopped to smoke.","остановился, чтобы закурить 🚬"]},
+ {v:"try",ing:["Try restarting the router.","эксперимент: попробуй и посмотри 🧪"],to:["I tried to lift the box but couldn't.","старался, было трудно 💪"]},
+ {v:"regret",ing:["I regret telling him.","жалею о сделанном 😔"],to:["We regret to inform you that…","офиц.: сожалеем сообщить ✉️"]}];
+
+/* ---------- ХАМЕЛЕОНЫ ---------- */
+const chamBox=document.getElementById('chamBox');
+CHAM.forEach((c,i)=>{
+  chamBox.insertAdjacentHTML('beforeend',
+   `<div class="card"><h3>🦎 ${c.v}</h3>
+    <div class="sw"><button class="on ing" data-i="${i}" data-m="ing">-ing</button><button data-i="${i}" data-m="to">to + inf</button></div>
+    <div class="ex ing cham-ex" id="chEx${i}"><b>${c.ing[0]}</b></div>
+    <p class="note" id="chRu${i}">${c.ing[1]}</p></div>`);
+});
+chamBox.addEventListener('click',e=>{
+  const b=e.target.closest('button[data-m]'); if(!b)return;
+  const i=b.dataset.i, m=b.dataset.m, c=CHAM[i];
+  b.parentElement.querySelectorAll('button').forEach(x=>x.className='');
+  b.className='on '+m;
+  const ex=document.getElementById('chEx'+i);
+  ex.className='ex cham-ex '+m;
+  ex.innerHTML='<b>'+c[m][0]+'</b>';
+  document.getElementById('chRu'+i).textContent=c[m][1];
+});
+
+/* ---------- ТРЕНАЖЁР 1 ---------- */
+let mi=0,ms=0;
+const mcqBox=document.getElementById('mcqBox'),mcqFb=document.getElementById('mcqFb'),
+      mcqNext=document.getElementById('mcqNext'),mcqProg=document.getElementById('mcqProg'),
+      mcqScore=document.getElementById('mcqScore');
+function mcqRender(){
+  const q=MCQ[mi];
+  mcqProg.style.width=(mi/MCQ.length*100)+'%';
+  mcqFb.textContent=''; mcqFb.className='fb'; mcqNext.hidden=true;
+  mcqBox.innerHTML=`<p class="q">${mi+1}. ${q.s.replace('___','<span class="blank">___</span>')}</p>`+
+    q.o.map((o,j)=>`<button class="opt" data-j="${j}">${o}</button>`).join('');
+}
+mcqBox.addEventListener('click',e=>{
+  const b=e.target.closest('.opt'); if(!b||b.disabled)return;
+  const q=MCQ[mi], ok=+b.dataset.j===q.a;
+  mcqBox.querySelectorAll('.opt').forEach((x,j)=>{x.disabled=true; if(j===q.a)x.classList.add('good');});
+  if(!ok)b.classList.add('bad'); else ms++;
+  mcqScore.textContent=ms+' / '+MCQ.length;
+  mcqFb.textContent=(ok?'✅ Верно! ':'❌ Nope. ')+q.n;
+  mcqFb.className='fb '+(ok?'good':'bad');
+  mcqNext.hidden=false;
+  mcqNext.textContent=(mi===MCQ.length-1)?'Результат 🏁':'Дальше →';
+});
+mcqNext.addEventListener('click',()=>{
+  if(mi<MCQ.length-1){mi++;mcqRender();}
+  else{
+    mcqProg.style.width='100%';
+    const emo=ms===10?'🏆':ms>=8?'🔥':ms>=6?'💪':'';
+    mcqBox.innerHTML=`<p class="q">${emo} Результат: ${ms} из ${MCQ.length}</p>
+      <p class="note">${ms>=8?'Отлично! Хамелеоны тебя не пугают.':ms>=6?'Хорошо! Повтори хамелеонов и предлоги.':'Загляни в шпаргалку выше и попробуй ещё раз.'}</p>`;
+    mcqNext.textContent='Ещё раз ↺';
+    mcqNext.onclick=()=>{mi=0;ms=0;mcqScore.textContent='0 / '+MCQ.length;mcqNext.onclick=null;mcqRender();};
+  }
+});
+mcqRender();
+
+/* ---------- ТРЕНАЖЁР 2 ---------- */
+const gapBox=document.getElementById('gapBox'),gapFb=document.getElementById('gapFb');
+gapBox.innerHTML=GAPS.map((g,i)=>`<p class="hunt-s">${i+1}. ${g.pre}<input class="gap" data-i="${i}" placeholder="(${g.v})" autocomplete="off">${g.post}<span class="ans" id="ga${i}"></span></p>`).join('');
+document.getElementById('gapCheck').addEventListener('click',()=>{
+  let ok=0;
+  GAPS.forEach((g,i)=>{
+    const inp=gapBox.querySelector(`input[data-i="${i}"]`);
+    const val=inp.value.trim().toLowerCase();
+    const prev=gapBox.querySelector(`#ga${i}`); prev.textContent='';
+    if(g.ans.includes(val)){inp.className='gap ok';ok++;}
+    else{inp.className='gap err';prev.textContent='→ '+g.ans[0];}
+  });
+  gapFb.textContent=`Результат: ${ok} из ${GAPS.length} `+(ok===GAPS.length?'🎉':ok>=7?'🔥':'💪');
+  gapFb.className='fb '+(ok>=7?'good':'bad');
+});
+document.getElementById('gapReset').addEventListener('click',()=>{
+  gapBox.querySelectorAll('input').forEach(i=>{i.value='';i.className='gap';});
+  gapBox.querySelectorAll('.ans').forEach(s=>s.textContent='');
+  gapFb.textContent='';
+});
+
+/* ---------- ТРЕНАЖЁР 3 ---------- */
+let hf=0;
+const huntBox=document.getElementById('huntBox'),huntFb=document.getElementById('huntFb'),
+      huntScore=document.getElementById('huntScore');
+huntBox.innerHTML=HUNT.map((h,i)=>`<p class="hunt-s" data-i="${i}">${i+1}. `+
+  h.c.map((c,j)=>`<button class="chunk" data-j="${j}">${c}</button>`).join(' ')+'</p>').join('');
+function reveal(p){
+  const i=+p.dataset.i,h=HUNT[i];
+  if(p.dataset.done)return;
+  p.dataset.done=1;
+  p.querySelector(`.chunk[data-j="${h.e}"]`).classList.add('found');
+  p.insertAdjacentHTML('beforeend',`<span class="fix">→ ${h.f} · ${h.n}</span>`);
+  hf++; huntScore.textContent=hf+' / '+HUNT.length;
+  if(hf===HUNT.length){huntFb.textContent='🎉 Все 8 ошибок найдены! Ты готов(а) к Part 4.';huntFb.className='fb good';}
+}
+huntBox.addEventListener('click',e=>{
+  const b=e.target.closest('.chunk'); if(!b)return;
+  const p=b.closest('p'); if(p.dataset.done)return;
+  if(+b.dataset.j===HUNT[p.dataset.i].e){reveal(p);}
+  else{b.classList.add('shake');setTimeout(()=>b.classList.remove('shake'),350);
+       huntFb.textContent='🙈 Не здесь. Ищи ошибку в форме глагола!';huntFb.className='fb bad';}
+});
+document.getElementById('huntShow').addEventListener('click',()=>{
+  huntBox.querySelectorAll('p:not([data-done])').forEach(reveal);
+});
+</script>
+</body>
+</html>
